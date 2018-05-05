@@ -73,6 +73,10 @@ public class Utility implements ICommonConstant{
 		return response;
 	}
 	
+	public int getStatusCode(){
+		return response.getStatusCode();
+	}
+	
 	public void validateStatusCode(int code){
 		response.then().statusCode(code);
 	}
@@ -103,6 +107,10 @@ public class Utility implements ICommonConstant{
 	public void validateResponse(String key, String value){
 		response.then().body(key, equalTo(value));
 	}
+	
+//	public void validateResponses(Map<String, String> responseFields){
+//		
+//	}
 	
 	public void checkForResponseIncludes(Map<String, String> responseFields){
 		for(Map.Entry<String, String>field: responseFields.entrySet()){

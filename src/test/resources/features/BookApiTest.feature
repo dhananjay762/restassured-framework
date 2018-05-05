@@ -1,6 +1,6 @@
 Feature: Get book by ISBN
 	
-	@test2
+	@googleBookApi
   Scenario: User calls web service to get a book by its ISBN
     Given A book exists with an isbn of 9781451648546
     When User retrieves the book by isbn

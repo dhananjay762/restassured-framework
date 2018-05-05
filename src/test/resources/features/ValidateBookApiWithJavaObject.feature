@@ -1,6 +1,6 @@
 Feature: Get book by author name
 
-  @byAuthorName
+  @googleBookApi
   Scenario: User calls web service to get books by author name
   	Given Books exist with author name as "Alan Brinkley"
   	When  User retrieves the book by author name

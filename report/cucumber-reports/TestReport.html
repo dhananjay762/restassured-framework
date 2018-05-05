@@ -40,6 +40,7 @@
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
 				<li class='waves-effect'><a href='#!' view='author-view' onclick="configureView(3)"><i class='material-icons'>person</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -53,7 +54,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>May 5, 2018 10:13:20 PM</span>
+                    <span class='label suite-start-time blue darken-3'>May 6, 2018 02:16:02 AM</span>
 				</a>
 			</li>
 			<li>
@@ -79,6 +80,8 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -91,7 +94,8 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@byAuthorName</a></li>
+					<li><a href='#'>@googleBookApi</a></li>
+					<li><a href='#'>@registerUser</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -139,10 +143,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -154,10 +158,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -169,10 +173,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>5</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='88.889%'><span class='strong'>16</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='5.556%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='5.556%'>1</span> others
 				</div>
 			</div>
 		</div>
@@ -188,26 +192,26 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Get book by author name</span>
-						<span class='test-time'>May 5, 2018 10:13:20 PM</span>
+						<span class='test-name'>Get book by ISBN</span>
+						<span class='test-time'>May 6, 2018 02:16:02 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
-		<span class='category label white-text'>@byAuthorName</span>
+		<span class='category label white-text'>@googleBookApi</span>
 	</div>
-	<span class='duration right label'>0h 0m 6s+272ms</span>
+	<span class='duration right label'>0h 0m 7s+275ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
-		<span class="desc-text">User calls web service to get books by author name</span>
+		<span class="desc-text">User calls web service to get a book by its ISBN</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='3' class='node given pass' status='pass'>
 			
 			<b>Given</b>
 			
-			<span class="bdd-step-name">Given Books exist with author name as "Alan Brinkley"</span>
+			<span class="bdd-step-name">Given A book exists with an isbn of 9781451648546</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -215,7 +219,7 @@
 			
 			<b>When</b>
 			
-			<span class="bdd-step-name">When User retrieves the book by author name</span>
+			<span class="bdd-step-name">When User retrieves the book by isbn</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -223,7 +227,7 @@
 			
 			<b>Then</b>
 			
-			<span class="bdd-step-name">Then the status code is 200</span>
+			<span class="bdd-step-name">Then The status code is 200</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -231,11 +235,170 @@
 			
 			<b>And</b>
 			
-			<span class="bdd-step-name">And Verify that book id is not blank</span>
+			<span class="bdd-step-name">And Response includes the following</span>
+				<div class='pre'><table><tr><td>totalItems</td><td>1</td></tr><tr><td>kind</td><td>books#volumes</td></tr></table></div>
 				<div class='pre'>passed</div>
 			
 		</li>
 		<li test-id='7' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Response includes the following in any order</span>
+				<div class='pre'><table><tr><td>items.volumeInfo.title</td><td>Steve Jobs</td></tr><tr><td>items.volumeInfo.publisher</td><td>Simon and Schuster</td></tr><tr><td>items.volumeInfo.pageCount</td><td>630</td></tr></table></div>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>User Registration</span>
+						<span class='test-time'>May 6, 2018 02:16:10 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='9' status='fail'>
+	<div class='category-list'>
+		<span class='category label white-text'>@registerUser</span>
+	</div>
+	<span class='duration right label'>0h 0m 3s+804ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Register a user in toolsqa application</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='10' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Form parameter is set for post call</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='11' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When Create user with all details in "Register.txt" file</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='12' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Make a post call</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='13' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then Status code should be 201</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='14' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Validate that user is added successfully</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='15' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then Make a post call</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='16' class='node and fail' status='fail'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Status code should be 201</span>
+				<div class='pre'><textarea>java.lang.AssertionError: expected:<201> but was:<200>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at stepDefinitions.UserRegistrationSteps.status_code_should_be(UserRegistrationSteps.java:32)
+	at ?.And Status code should be 201(RegisterUser.feature:11)
+</textarea></div>
+			
+		</li>
+		<li test-id='17' class='node and skip' status='skip'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Validate that user already exists</span>
+				<div class='pre'>skipped</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>Get book by author name</span>
+						<span class='test-time'>May 6, 2018 02:16:13 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='19' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@googleBookApi</span>
+	</div>
+	<span class='duration right label'>0h 0m 1s+889ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">User calls web service to get books by author name</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='20' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given Books exist with author name as "Alan Brinkley"</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='21' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When User retrieves the book by author name</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='22' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then The status code is 200</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='23' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Verify that book id is not blank</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='24' class='node and pass' status='pass'>
 			
 			<b>And</b>
 			
@@ -299,14 +462,14 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@byAuthorName</span>
+						<span class='category-name'>@googleBookApi</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
+							<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -322,9 +485,48 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>May 5, 2018 10:13:20 PM</td>
-										<td class='linked' test-id='2'>Get book by author name.User calls web service to get books by author name</td>
+										<td>May 6, 2018 02:16:02 AM</td>
+										<td class='linked' test-id='2'>Get book by ISBN.User calls web service to get a book by its ISBN</td>
 										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>May 6, 2018 02:16:13 AM</td>
+										<td class='linked' test-id='19'>Get book by author name.User calls web service to get books by author name</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@registerUser</span>
+						<span class='category-status right'>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 6, 2018 02:16:10 AM</td>
+										<td class='linked' test-id='9'>User Registration.Register a user in toolsqa application</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -371,13 +573,14 @@
                             <div class='author-heading'>
                                 <span class='author-name'>DhananjayDewangan</span>
                                 <span class='author-status right'>
-                                        <span class='label pass'>1</span>
+                                        <span class='label pass'>2</span>
+                                        <span class='label fail'>1</span>
 						        </span>
                             </div>
                             <div class='author-content hide'>
                                 <div class='author-status-counts'>
-                                    <span class='label green accent-4 white-text'>Passed: 1</span>
-                                    
+                                    <span class='label green accent-4 white-text'>Passed: 2</span>
+                                    <span class='label red lighten-1 white-text'>Failed: 1</span>
                                     
                                 </div>
 
@@ -392,8 +595,18 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>May 5, 2018 10:13:20 PM</td>
-                                                <td class='linked' test-id='2'>Get book by author name.User calls web service to get books by author name</td>
+                                                <td>May 6, 2018 02:16:02 AM</td>
+                                                <td class='linked' test-id='2'>Get book by ISBN.User calls web service to get a book by its ISBN</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>May 6, 2018 02:16:10 AM</td>
+                                                <td class='linked' test-id='9'>User Registration.Register a user in toolsqa application</td>
+                                                <td><span class='test-status fail'>fail</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>May 6, 2018 02:16:13 AM</td>
+                                                <td class='linked' test-id='19'>Get book by author name.User calls web service to get books by author name</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                         </tbody>
@@ -412,6 +625,74 @@
         </div>
     </div>
 </div>
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.AssertionError</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>May 6, 2018 02:16:13 AM</td>
+                                                        <td class='linked' test-id='16'>User Registration.Register a user in toolsqa application.And Status code should be 201</td>
+                                                        <td><pre><textarea>java.lang.AssertionError: expected:<201> but was:<200>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at stepDefinitions.UserRegistrationSteps.status_code_should_be(UserRegistrationSteps.java:32)
+	at ?.And Status code should be 201(RegisterUser.feature:11)
+</textarea></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -421,37 +702,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>5</div>
+					<div class='panel-lead'>18</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>May 5, 2018 10:13:20 PM</div>
+					<div class='panel-lead'>May 6, 2018 02:16:02 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>May 5, 2018 10:13:27 PM</div>
+			 		<div class='panel-lead'>May 6, 2018 02:16:15 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>6,614ms</div>
+					<div class='panel-lead'>13,339ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -495,12 +776,21 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@byAuthorName</td>
-							<td>1</td>
+							<td>@googleBookApi</td>
+							<td>2</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
 									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@registerUser</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
 							</td>
 						</tr>
 					</table>
@@ -516,31 +806,31 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
-				failParent: 0,
+				passParent: 2,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 1,
-				failChild: 0,
+				passChild: 2,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 1,
 				
-				passGrandChild: 5,
-				failGrandChild: 0,
+				passGrandChild: 16,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 1,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 2,
 			};
 		</script>
 		
