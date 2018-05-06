@@ -134,9 +134,9 @@ public class Utility implements ICommonConstant{
 	
 	public JSONObject createJsonObject(String fileName) throws FileNotFoundException, IOException, ParseException{
 		jsonParser = new JSONParser();
-//		jsonArray = new JSONArray();
 		Object obj = jsonParser.parse(new FileReader(fileName));
 		jsonObject = (JSONObject)obj;
+//		jsonArray = (JSONArray)obj;
 		return jsonObject;
 	}
 	
@@ -146,7 +146,7 @@ public class Utility implements ICommonConstant{
 //	      // get the keys of json object
 //	      Set iterator = obj.keySet();
 //	      String key = null;
-//	      while (((Object) iterator).hasNext()) {
+//	      while (iterator.toArray()getCla) {
 //	          key = (String) iterator.next();
 //	          // if the key is a string, then update the value
 //	          if ((obj.optJSONArray(key) == null) && (obj.optJSONObject(key) == null)) {

@@ -3,11 +3,9 @@ package support;
 import com.cucumber.listener.Reporter;
 import managers.ConfigFileReader;
 import common.*;
-import cucumber.api.java.After;
 
 public class Report implements ICommonConstant{
 	
-	@After
 	public static void createReport() throws Exception{
 		ConfigFileReader reader = new ConfigFileReader();
 		Reporter.loadXMLConfig(reader.getReportConfigPath());

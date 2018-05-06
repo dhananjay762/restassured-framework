@@ -8,5 +8,5 @@ Feature: User Registration
   	Then  Status code should be 201
   	And   Validate that user is added successfully
   	Then  Make a post call
-  	And   Status code should be 201
+  	And   Status code should be 200
 		And   Validate that user already exists
