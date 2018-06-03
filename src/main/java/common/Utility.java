@@ -8,9 +8,7 @@ import static org.hamcrest.Matchers.containsInAnyOrder;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.json.simple.JSONArray;
