@@ -43,7 +43,7 @@ Please do checkout a youtube video which would give you more insight on API [Res
 #### Writing Features
 
 <p align="left">
-<img src= "./images/Feature.PNG" height=180 alt="featureImage.png"/>
+<img src= "./images/Feature.png" height=180 alt="featureImage.png"/>
 </p>
 
 #### Writing Step Definitions
